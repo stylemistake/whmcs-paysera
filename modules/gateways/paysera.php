@@ -59,7 +59,7 @@ function paysera_link($params) {
         $code  = '<form method="get" action="' . WebToPay::getPaymentUrl() . '"">';
         $code .= '<input type="hidden" name="data" value="' . $request["data"] . '">';
         $code .= '<input type="hidden" name="sign" value="' . $request["sign"] . '">';
-        $code .= '<input type="submit" value="Pay now">';
+        $code .= '<input type="submit" value="' . Lang::trans('invoicespaynow') . '">';
         $code .= '</form>';
 
         return $code;
